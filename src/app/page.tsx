@@ -1,6 +1,6 @@
 // import Image from "next/image";
 
-// import Test from "@/_components/Test";
+import Test from "@/_components/Test";
 
 const getDummyData = async () => {
   try {
@@ -22,12 +22,12 @@ export default async function Home() {
 
   return (
     <div>
+      <Test />
       {data.map((item) => (
         <div key={item.login.uuid}>
           {item.name.title} {item.name.first} {item.name.last}
         </div>
       ))}
-      {/* <Test /> */}
     </div>
   );
 }
